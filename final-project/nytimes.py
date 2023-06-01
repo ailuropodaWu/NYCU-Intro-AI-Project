@@ -29,6 +29,7 @@ def get_train_data(data_path = './nytimes-dataset/nytimes.pkl'):
 
     print('Pick the data to train')
     train_data = []
+    test_data = []
     for i, row in tqdm(data.iterrows()):
         if random.uniform(0,1) < pick_rate:
             train_data.append(row)
@@ -39,7 +40,7 @@ def get_train_data(data_path = './nytimes-dataset/nytimes.pkl'):
     train = train.reset_index().drop(columns=['index'])
     test = test.reset_index().drop(columns=['index'])
     print(f'Get {len(train)} Train Data')
-    print(f'Get {len(test)} Train Data')
+    print(f'Get {len(test)} Test Data')
 
     train = process(train)
     test = process(test)
