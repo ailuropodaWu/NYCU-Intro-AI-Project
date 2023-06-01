@@ -149,14 +149,14 @@ if __name__ == '__main__':
     data_path = f'./nytimes-dataset/{data_src}.pkl'
     train_data_path = f'./nytimes-dataset/{train_dst}.pkl'
     test_data_path = f'./nytimes-dataset/{test_dst}.pkl'
-    #get_data()
     
-    train, test = get_train_data(data_path)
 
-    #train = pd.read_pickle(train_data_path)
-    #test = pd.read_pickle(test_data_path)
-    #train = get_comment_num(train)
-    #test = get_comment_num(test)
+    #train, test = get_train_data(data_path)
+
+    train = pd.read_pickle(train_data_path)
+    test = pd.read_pickle(test_data_path)
+    train = get_comment_num(train)
+    test = get_comment_num(test)
 
     train.to_pickle(train_data_path)
     test.to_pickle(test_data_path)
