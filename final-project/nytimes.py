@@ -154,9 +154,9 @@ if __name__ == '__main__':
     #train, test = get_train_data(data_path)
 
     train = pd.read_pickle(train_data_path)
-    test = pd.read_pickle(test_data_path)
     train = get_comment_num(train)
-    test = get_comment_num(test)
-
     train.to_pickle(train_data_path)
+
+    test = pd.read_pickle(test_data_path)
+    test = get_comment_num(test)
     test.to_pickle(test_data_path)
