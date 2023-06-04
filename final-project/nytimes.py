@@ -18,9 +18,9 @@ def get_data():
             sleep(12)
             data += req.json()["response"]["docs"]
     
-    pd.DataFrame(data).to_pickle('./nytimes-dataset/test.pkl')
+    pd.DataFrame(data).to_pickle('./dataset/test.pkl')
 
-def get_train_data(data_path = './nytimes-dataset/nytimes.pkl'):
+def get_train_data(data_path = './dataset/nytimes.pkl'):
 
     print('Access data from pickle')
     data = pd.read_pickle(data_path)
@@ -146,9 +146,9 @@ if __name__ == '__main__':
     data_src = 'article'
     train_dst = 'train'
     test_dst = 'test'
-    data_path = f'./nytimes-dataset/{data_src}.pkl'
-    train_data_path = f'./nytimes-dataset/{train_dst}.pkl'
-    test_data_path = f'./nytimes-dataset/{test_dst}.pkl'
+    data_path = f'./dataset/{data_src}.pkl'
+    train_data_path = f'./dataset/{train_dst}.pkl'
+    test_data_path = f'./dataset/{test_dst}.pkl'
     
 
     #train, test = get_train_data(data_path)
