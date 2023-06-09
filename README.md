@@ -25,3 +25,14 @@ Questions We Think We May Face :
 - We have difficulty in fetching the capable dataset.
 - There may be some ambiguous attributes we are not able to determine.
 - The accuracy may not reach our expectation.
+
+
+## Implementation
+
+### Data Collection
+- Use NYTimes API to scrap the article information and NYTimes Community to scrap the comment information, mainly n_comment
+- Period :<br/>Data from 2021 - 2022
+- Train Test Split :<br/>
+  Split data into train and test by the ratio 2/3
+- Modified : <br/>
+  We find out that there are a lot 0 comment article in the dataset, so we are interest with that would they effect the model a lot. Then we make two version of dataset with the difference in deleting the 0 comment datas
